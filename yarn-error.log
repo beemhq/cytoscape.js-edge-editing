@@ -1,0 +1,76 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js gulp
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.6/bin:/Users/haakonjack/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/haakonjack/projects/cytoscape.js-edge-editing/package.json: Unexpected string in JSON at position 284
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "cytoscape-edge-bend-editing",
+    "version": "1.6.1",
+    "description": "A Cytoscape.js extension enables editing edge bend points",
+    "main": "cytoscape-edge-bend-editing.js",
+    "spm": {
+      "main": "cytoscape-edge-bend-editing.js"
+    },
+    "scripts": {
+      "watch": "g"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "gulp build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/iVis-at-Bilkent/cytoscape.js-edge-bend-editing.git"
+    },
+    "keywords": [
+      "cytoscape",
+      "cyext"
+    ],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/iVis-at-Bilkent/cytoscape.js-edge-bend-editing/issues"
+    },
+    "homepage": "https://github.com/iVis-at-Bilkent/cytoscape.js-edge-bend-editing",
+    "devDependencies": {
+      "browserify": "^11.2.0",
+      "gulp": "^3.9.1",
+      "gulp-derequire": "^2.1.0",
+      "gulp-jshint": "^1.11.2",
+      "gulp-prompt": "^0.1.2",
+      "gulp-replace": "^0.5.4",
+      "gulp-shell": "^0.5.0",
+      "gulp-util": "^3.0.6",
+      "jshint-stylish": "^2.0.1",
+      "node-notifier": "^4.3.1",
+      "run-sequence": "^1.1.4",
+      "vinyl-buffer": "^1.0.0",
+      "vinyl-source-stream": "^1.1.0"
+    },
+    "peerDependencies": {
+      "cytoscape": "^2.7.0 || ^3.0.0",
+      "jquery": "^1.7.0 || ^2.0.0 || ^3.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

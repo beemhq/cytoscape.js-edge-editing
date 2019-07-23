@@ -28,19 +28,21 @@ var logError = function( err ){
   gutil.log( gutil.colors.red('Error in watch:'), gutil.colors.red(err) );
 };
 
-gulp.task('build', function(){
-  return browserify( browserifyOpts )
+const build = function() {
+  return browserify(browserifyOpts)
     .bundle()
-    .on( 'error', logError )
-    .pipe( source('cytoscape-edge-bend-editing.js') )
-    .pipe( buffer() )
-    .pipe( derequire() )
-    .pipe( gulp.dest('.') )
-});
+    .on("error", logError)
+    .pipe(source("cytoscape-edge-bend-editing.js"))
+    .pipe(buffer())
+    .pipe(derequire())
+    .pipe(gulp.dest("."));
+};
 
-gulp.task('default', ['build'], function( next ){
-  next();
-});
+gulp.task('watch', ()=> gulp.watch(['src/*'], build));
+
+gulp.task("build", build);
+
+gulp.task("default", ['watch']);
 
 gulp.task('publish', [], function( next ){
   runSequence('confver', /*'lint',*/ 'pkgver', 'push', 'tag', 'npm', next);

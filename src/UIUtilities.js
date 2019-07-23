@@ -216,7 +216,7 @@ module.exports = function (params, cy) {
         
         // render bend shape
         ctx.beginPath();
-        ctx.rect(renderedTopLeftPos.x, renderedTopLeftPos.y, length, length);
+        ctx.arc(renderedTopLeftPos.x, renderedTopLeftPos.y, length / 2, 0, 2 * Math.PI);
         ctx.fill();
         ctx.closePath();
       }
